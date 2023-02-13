@@ -84,8 +84,9 @@ function game() {
         scorePlayer += 1;
         break;
     }
+    score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
+    console.log(score);
   }
-  score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
 
   return score;
 }

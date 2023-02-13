@@ -24,3 +24,17 @@ function playerChoice() {
   );
   return playerChoice;
 }
+
+function defPlayerChoice() {
+  let defPlayerChoice;
+  switch (playerChoice()) {
+    case 1:
+      return (defPlayerChoice = "rock");
+    case 2:
+      return (defPlayerChoice = "paper");
+    case 3:
+      return (defPlayerChoice = "scissors");
+    default:
+      return console.log("error");
+  }
+}

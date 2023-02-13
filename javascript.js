@@ -89,3 +89,5 @@ function game() {
 
   return score;
 }
+
+game();

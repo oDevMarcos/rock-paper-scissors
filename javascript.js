@@ -35,3 +35,57 @@ function defPlayerChoice() {
       return console.log("error");
   }
 }
+
+function game() {
+  let choicePC;
+  let choicePlayer;
+  let scorePc = 0;
+  let scorePlayer = 0;
+  let score;
+
+  for (let i = 1; i <= 5; i++) {
+    choicePC = computerChoice();
+    choicePlayer = defPlayerChoice();
+
+    console.log(`\n\nRound ${i}!\n\n\n\n`);
+
+    console.log(`PC: ${choicePC} ||| Player: ${choicePlayer}`);
+
+    switch (true) {
+      case choicePC === choicePlayer:
+        console.log("Draww!!!");
+        break;
+
+      // Pc win
+      case choicePC === "rock" && choicePlayer === "scissors":
+        console.log("PC WINN!");
+        scorePc += 1;
+        break;
+      case choicePC === "scissors" && choicePlayer === "paper":
+        console.log("PC WINN!");
+        scorePc += 1;
+        break;
+      case choicePC === "paper" && choicePlayer === "rock":
+        console.log("PC WINN!");
+        scorePc += 1;
+        break;
+
+      //player win
+      case choicePlayer === "rock" && choicePC === "scissors":
+        console.log("Player WINN!");
+        scorePlayer += 1;
+        break;
+      case choicePlayer === "scissors" && choicePC === "paper":
+        console.log("Player WINN!");
+        scorePlayer += 1;
+        break;
+      case choicePlayer === "paper" && choicePC === "rock":
+        console.log("Player WINN!");
+        scorePlayer += 1;
+        break;
+    }
+  }
+  score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
+
+  return score;
+}

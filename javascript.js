@@ -14,3 +14,13 @@ function computerChoice() {
       return console.log("error");
   }
 }
+
+function playerChoice() {
+  playerChoice = parseInt(
+    prompt(`CHOOSE A NUMBER:
+  1 - Rock;
+  2 - Paper;
+  3 - Scissors;`)
+  );
+  return playerChoice;
+}

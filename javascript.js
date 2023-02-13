@@ -15,19 +15,16 @@ function computerChoice() {
   }
 }
 
-function playerChoice() {
+function defPlayerChoice() {
+  let defPlayerChoice;
   playerChoice = parseInt(
     prompt(`CHOOSE A NUMBER:
   1 - Rock;
   2 - Paper;
   3 - Scissors;`)
   );
-  return playerChoice;
-}
 
-function defPlayerChoice() {
-  let defPlayerChoice;
-  switch (playerChoice()) {
+  switch (playerChoice) {
     case 1:
       return (defPlayerChoice = "rock");
     case 2:

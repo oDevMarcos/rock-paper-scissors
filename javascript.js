@@ -68,6 +68,10 @@ function game() {
       console.log("Player WINN!");
       scorePlayer += 1;
     }
+    // fixing bug of the computer always winning when the number is invalid
+    else if (choicePlayer === undefined) {
+      console.log("invalid value, try again");
+    }
     // PC WIN
     else {
       console.log("PC WINN!");

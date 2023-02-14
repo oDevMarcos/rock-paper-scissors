@@ -1,0 +1,17 @@
+body {
+  background-color: #15191d;
+  color: #bfbfbf;
+}
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.wrapper {
+  margin-left: 50px;
+}

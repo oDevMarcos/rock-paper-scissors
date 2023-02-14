@@ -56,30 +56,22 @@ function game() {
 
     // Determine the chapion
     switch (true) {
+      // Draw!
       case choicePC === choicePlayer:
         console.log("Draww!!!");
         break;
-
-      // Pc win
-      case choicePC === "rock" && choicePlayer === "scissors":
-        console.log("PC WINN!");
-        scorePc += 1;
-        break;
-      case choicePC === "scissors" && choicePlayer === "paper":
-        console.log("PC WINN!");
-        scorePc += 1;
-        break;
-      case choicePC === "paper" && choicePlayer === "rock":
-        console.log("PC WINN!");
-        scorePc += 1;
-        break;
-
       //player win
       case (choicePlayer === "rock" && choicePC === "scissors") ||
         (choicePlayer === "scissors" && choicePC === "paper") ||
         (choicePlayer === "paper" && choicePC === "rock"):
         console.log("Player WINN!");
         scorePlayer += 1;
+        break;
+      // Pc win
+      default:
+        console.log("PC WINN!");
+        scorePc += 1;
+        break;
     }
     score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
     console.log(score);

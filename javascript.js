@@ -75,18 +75,11 @@ function game() {
         break;
 
       //player win
-      case choicePlayer === "rock" && choicePC === "scissors":
+      case (choicePlayer === "rock" && choicePC === "scissors") ||
+        (choicePlayer === "scissors" && choicePC === "paper") ||
+        (choicePlayer === "paper" && choicePC === "rock"):
         console.log("Player WINN!");
         scorePlayer += 1;
-        break;
-      case choicePlayer === "scissors" && choicePC === "paper":
-        console.log("Player WINN!");
-        scorePlayer += 1;
-        break;
-      case choicePlayer === "paper" && choicePC === "rock":
-        console.log("Player WINN!");
-        scorePlayer += 1;
-        break;
     }
     score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
     console.log(score);

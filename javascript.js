@@ -53,26 +53,27 @@ function game() {
     console.log(`\n\nRound ${i}!\n\n\n\n`);
 
     console.log(`PC: ${choicePC} ||| Player: ${choicePlayer}`);
-
     // Determine the chapion
-    switch (true) {
-      // Draw!
-      case choicePC === choicePlayer:
-        console.log("Draww!!!");
-        break;
-      //player win
-      case (choicePlayer === "rock" && choicePC === "scissors") ||
-        (choicePlayer === "scissors" && choicePC === "paper") ||
-        (choicePlayer === "paper" && choicePC === "rock"):
-        console.log("Player WINN!");
-        scorePlayer += 1;
-        break;
-      // Pc win
-      default:
-        console.log("PC WINN!");
-        scorePc += 1;
-        break;
+
+    // Draw
+    if (choicePC === choicePlayer) {
+      console.log("Draww!!");
     }
+    // Player win
+    else if (
+      (choicePlayer === "rock" && choicePC === "scissors") ||
+      (choicePlayer === "scissors" && choicePC === "paper") ||
+      (choicePlayer === "paper" && choicePC === "rock")
+    ) {
+      console.log("Player WINN!");
+      scorePlayer += 1;
+    }
+    // PC WIN
+    else {
+      console.log("PC WINN!");
+      scorePc += 1;
+    }
+
     score = `FINAL RESULT ->>> PC: ${scorePc} | Player: ${scorePlayer}`;
     console.log(score);
   }
